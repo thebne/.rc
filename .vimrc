@@ -13,6 +13,19 @@ Plugin 'VundleVim/Vundle.vim'
 " syntax highlighting
 Plugin 'sjl/badwolf'
 
+" file finder
+Plugin 'ctrlpvim/ctrlp.vim'
+
+" goyo - hide gui
+Plugin 'junegunn/goyo.vim'
+
+" status bar
+Plugin 'itchyny/lightline.vim'
+
+" quick nav
+Plugin 'easymotion/vim-easymotion'
+
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -34,8 +47,8 @@ syntax on
 " For plugins to load correctly
 filetype plugin indent on
 
-" TODO: Pick a leader key
-" let mapleader = ","
+" Pick a leader key
+let mapleader = ","
 
 " Security
 set modelines=0
