@@ -25,6 +25,15 @@ Plugin 'itchyny/lightline.vim'
 " quick nav
 Plugin 'easymotion/vim-easymotion'
 
+" fuzzy finder 
+Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plugin 'junegunn/fzf.vim'
+
+" multiple cursors
+Plugin 'terryma/vim-multiple-cursors'
+
+" nav tree
+Plugin 'scrooloose/nerdtree'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -132,3 +141,5 @@ let g:solarized_termcolors=256
 let g:solarized_termtrans=1
 
 colorscheme badwolf 
+
+map <C-o> :NERDTreeToggle<CR>
