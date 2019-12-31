@@ -142,4 +142,29 @@ let g:solarized_termtrans=1
 
 colorscheme badwolf 
 
+" NRED - open tree
 map <C-o> :NERDTreeToggle<CR>
+
+" close current file
+nmap <leader>d :b#<bar>bd#<CR>
+
+" clipboard list, access using \"0p, \"1p etc
+nmap <leader>p :reg<CR>
+
+" FZF
+nnoremap <leader>ff :Files<CR>
+nnoremap <leader>fg :GFiles<CR>
+nnoremap <leader>fs :GFiles?<CR>
+nnoremap <leader>fb :Buffers<CR>
+nnoremap <leader>fa :Ag 
+nnoremap <leader>fA :Ag <C-r><C-w><CR>
+nnoremap <leader>fl :Lines<CR>
+nnoremap <leader>fh :History<CR>
+nnoremap <leader>fw :History/<CR>
+
+" YCM
+nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <leader>gt :YcmCompleter GoTo<CR>
+
