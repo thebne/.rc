@@ -145,16 +145,18 @@ let g:solarized_termtrans=1
 
 colorscheme badwolf 
 
-" NRED - open tree
-map <C-o> :NERDTreeToggle<CR>
-
 " close current file
 nmap <leader>d :b#<bar>bd#<CR>
 
 " clipboard list, access using \"0p, \"1p etc
 nmap <leader>p :reg<CR>
 
-" FZF
+
+""" NRED - open tree
+map <C-o> :NERDTreeToggle<CR>
+
+
+""" FZF
 nnoremap <leader>ff :Files<CR>
 nnoremap <leader>fg :GFiles<CR>
 nnoremap <leader>fs :GFiles?<CR>
@@ -165,9 +167,19 @@ nnoremap <leader>fl :Lines<CR>
 nnoremap <leader>fh :History<CR>
 nnoremap <leader>fw :History/<CR>
 
-" YCM
+""" YCM
 nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>gt :YcmCompleter GoTo<CR>
 
+""" EasyMotion
+let g:EasyMotion_do_mapping = 0
+let g:EasyMotion_smartcase = 1
+nmap s <Plug>(easymotion-overwin-f)
+" Move to line
+map <Leader>L <Plug>(easymotion-bd-jk)
+nmap <Leader>L <Plug>(easymotion-overwin-line)
+" Move to word
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
