@@ -149,8 +149,14 @@ colorscheme badwolf
 nmap <leader>d :b#<bar>bd#<CR>
 
 " clipboard list, access using \"0p, \"1p etc
-nmap <leader>p :reg<CR>
+nmap <leader>P :reg<CR>
 
+" paste mode
+nmap <leader>pp :set paste<CR>
+nmap <leader>pn :set nopaste<CR>
+
+" no wrap
+set textwidth=0
 
 """ NRED - open tree
 map <C-o> :NERDTreeToggle<CR>
@@ -166,6 +172,8 @@ nnoremap <leader>fA :Ag <C-r><C-w><CR>
 nnoremap <leader>fl :Lines<CR>
 nnoremap <leader>fh :History<CR>
 nnoremap <leader>fw :History/<CR>
+" respect .gitignore
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 """ YCM
 nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
