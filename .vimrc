@@ -38,6 +38,9 @@ Plugin 'scrooloose/nerdtree'
 " autocomplete
 Plugin 'ycm-core/YouCompleteMe'
 
+" Shader syntax highlighting
+Plugin 'tikhomirov/vim-glsl'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -191,3 +194,9 @@ nmap <Leader>L <Plug>(easymotion-overwin-line)
 " Move to word
 map  <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
+
+
+""" GLSL
+" add support for .shader files
+autocmd! BufNewFile,BufRead *.shader set ft=glsl
+
